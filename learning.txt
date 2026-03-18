@@ -1,0 +1,6 @@
+# Micrograd - Lesson 1
+- We are using the topo function (which creates a topological graph) because it creates the otherwise complicated multidirectional graph to be unidirectional
+- some bugs to address
+    - Look at the micrograd jupyter notebook
+- interesting : after converting an int or float to a Value object, a * 2 (a.__mul__(2)) is defined. but the same thing in reverse, i.e. 2 * a (2.__mul__(a)) is not defined.
+    For this, we define a new function: __rmul__() which essentially checks for whether it is the other way around and then executes the same function 
